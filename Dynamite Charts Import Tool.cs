@@ -121,7 +121,7 @@ namespace Dynamite_Chart
             _FsWrite.Close();
         }
         
-        public static string GetRandom16(int length)
+        public static string GetRandom16(int length)//用于获得指定长度的16进制随机数
         {
             string _return = "";
             int a;
