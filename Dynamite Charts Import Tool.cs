@@ -13,25 +13,28 @@ namespace Dynamite_Chart
 			if (File.Exists("./rena_index_list") == false && (File.Exists("./rena_index_list") == false))
 			{
 			//若未找到谱面信息文件，自动下载
-	         WebClient wc = new WebClient();
-            wc.DownloadFile
-            (
-            "https://gh.api.99988866.xyz/https://raw.githubusercontent.com/EDTA-gif/dynamite-charts-repository/main/rena_index_list"
-            //以上为github的加速站点地址
-            ,
-            @"rena_index_list"
-            );
-                
+	                WebClient wc = new WebClient();
+                        wc.DownloadFile
+                        (
+                        "https://gh.api.99988866.xyz/https://raw.githubusercontent.com/EDTA-gif/dynamite-charts-repository/main/rena_index_list"
+                        //以上为github的加速站点地址
+                        ,
+                         @"rena_index_list"
+                         );
+                        //空格和缩进混着用。。。：一个字体一个样，凎
 			}
 		}
 		
         static string path = "./";
         public static void Main()
         {
-        	string[] floders = GetFloder(path).ToArray<string>();
-            GetRena();
-            
-            WriteRena(floders);
+            //新手，不是很熟练，一堆代码没写注释请，见谅
+            string[] floders = GetFloder(path).ToArray<string>();//获取程序主目录下的文件夹
+            GetRena();//下载谱面信息，若已存在，则跳过，不存在则下载一遍
+            Console.WriteLine("正在写入。。。");
+            WriteRena(floders);//写入信息
+            Console.WriteLine("写入成功！\n按任意键继续:");
+            Console.ReadKey();
         }
         public static List<string> GetFloder(string _path)
         {
