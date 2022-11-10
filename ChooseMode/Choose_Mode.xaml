@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+	xmlns:local="clr-namespace:Dynamite_Charts_Tools"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Dynamite_Charts_Tools.Choose_Mode"
+	x:Name="Choose_Mode_">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="7*"></RowDefinition>
+			<RowDefinition Height="3*"></RowDefinition>
+		</Grid.RowDefinitions>
+		
+		
+		<StackLayout
+		Margin="4">
+			
+			<Label 
+			Margin="16"
+			Text="请选择模式" 
+			FontSize="24" 
+			TextColor="White" 
+			HorizontalOptions="CenterAndExpand"/>
+			
+			<Button 
+			WidthRequest="214" 
+			HeightRequest="50" 
+			HorizontalOptions="Center" 
+			Text="1.下载谱面"
+			FontSize="20"
+			
+			Clicked="GotoDownload"/>
+			
+			<Button 
+			WidthRequest="214" 
+			HeightRequest="50" 
+			HorizontalOptions="Center" 
+			Text="2.导入谱面"
+			FontSize="20"/>
+		</StackLayout>
+		
+		
+		<StackLayout
+			Grid.Row="1"
+			HorizontalOptions="FillAndExpand"
+			Orientation="Vertical">
+			
+			<Grid 
+			VerticalOptions="EndAndExpand">
+				
+				<StackLayout>
+					
+				<Label 
+					TextDecorations="Underline"
+					Text="打开作者B站主页"
+					TextColor="SkyBlue"
+					HorizontalOptions="End">
+					<Label.GestureRecognizers>
+						<TapGestureRecognizer Tapped="Open_YIXIAODIANCC_S_Space"/>
+					</Label.GestureRecognizers>
+				</Label>
+				
+				<Button
+				WidthRequest="100"
+				Text="设置"
+				Clicked="GotoSetting"
+				FontSize="24"
+				HorizontalOptions="EndAndExpand"/>
+				
+				</StackLayout>
+				
+				<StackLayout
+				HorizontalOptions="Start"
+				Orientation="Horizontal">
+					<Label
+					Text="Ver 1.00"
+					VerticalOptions="End"/>
+				</StackLayout>
+				
+			</Grid>
+
+		</StackLayout>
+	</Grid>
+</ContentPage>
