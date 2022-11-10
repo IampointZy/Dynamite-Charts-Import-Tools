@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+	xmlns:local="clr-namespace:Dynamite_Charts_Tools"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Dynamite_Charts_Tools.Download"
+	x:Name="Page_Download">
+	<StackLayout
+	Spacing="0">
+		<StackLayout
+		BackgroundColor="LightGray"
+		HeightRequest="36">
+			
+			<Label 
+			TextColor="Black"
+			FontSize="20"
+			Margin="4"
+			Text="＜返回">
+				<Label.GestureRecognizers>
+					<TapGestureRecognizer Tapped="GotoChoose"/>
+				</Label.GestureRecognizers>
+			</Label>
+			
+		</StackLayout>
+		<ScrollView HeightRequest="140">
+			<StackLayout x:Name="stackLayout">
+			</StackLayout>
+		</ScrollView>
+	
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*"/>
+				<ColumnDefinition Width="1*"/>
+			</Grid.ColumnDefinitions>
+			<Button Text="上一页" Grid.Column="0" Clicked="LastChartsPage"/>
+			<Button Text="下一页" Grid.Column="1" Clicked="NextChartsPage"/>
+			
+		</Grid>
+
+			<Button
+			x:Name="ACTDownloadListButton"
+			IsEnabled="False"
+			Text="添加……至下载列表"
+			Clicked="ACTDownloadList">
+			</Button>
+			<Button
+			x:Name="DownloadButton"
+			IsEnabled="False"
+			Text="一键下载"
+			Clicked="DownloadCharts"/>
+	</StackLayout>
+</ContentPage>
