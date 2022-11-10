@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+	xmlns:xct="http://xamarin.com/schemas/2020/toolkit"	xmlns:local="clr-namespace:Dynamite_Charts_Tools"
+
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+	x:Class="Dynamite_Charts_Tools.Setting"
+
+	x:Name="setting_">
+
+	<Grid
+
+	RowSpacing="0">
+
+		<Grid.RowDefinitions>
+
+			<RowDefinition Height="0.5*"/>
+
+			<RowDefinition Height="7*"/>
+
+			<RowDefinition Height="0.7*"/>
+
+		</Grid.RowDefinitions>
+
+		<StackLayout
+
+		BackgroundColor="LightGray"
+
+		Grid.Row="0">
+
+			<Label 
+
+			TextColor="Black"
+
+			FontSize="20"
+
+			Margin="4"
+
+			Text="＜返回">
+
+				<Label.GestureRecognizers>
+
+					<TapGestureRecognizer Tapped="GotoChoose"/>
+
+				</Label.GestureRecognizers>
+
+			</Label>
+
+		</StackLayout>
+
+		
+
+		
+
+		<ScrollView
+
+		Grid.Row="1">
+
+			<StackLayout>
+
+				<Grid>
+
+					<Grid.ColumnDefinitions>
+
+						<ColumnDefinition Width="1*"/>
+
+						<ColumnDefinition Width="3*"/>
+
+					</Grid.ColumnDefinitions>
+
+					<Label
+
+					Text="每页显示歌曲数:"
+
+					Grid.Column="0"/>
+
+					<Editor
+
+					x:Name="MaxSongInAPage"
+
+					Completed="SaveMaxSongInAPage"
+
+					Grid.Column="1"
+
+					MaxLength="4"/>
+
+					
+
+				</Grid>
+
+			</StackLayout>
+
+		</ScrollView>
+
+		
+
+			
+
+		<StackLayout
+
+		Grid.Row="2">
+
+			
+
+		</StackLayout>
+
+	</Grid>
+
+</ContentPage>
