@@ -214,9 +214,9 @@ namespace Dynamite_Charts_Tools
 			.Split("\n")[0];
 			return result;
 		}
-		public static string downloadAddress = "https://gh.api.99988866.xyz/https://raw.githubusercontent.com/EDTA-gif/dynamite-charts-repository/main/Charts/";
+		public static string downloadAddress = "https://xxx.com/Charts/";
 		
-		public static string rena_DownloadAddress = "https://gh.api.99988866.xyz/https://raw.githubusercontent.com/EDTA-gif/dynamite-charts-repository/main/rena_index_list";
+		public static string rena_DownloadAddress = "https://xxx.com/Charts/rena_index_list";
 		
 		
 		
